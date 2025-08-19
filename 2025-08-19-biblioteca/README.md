@@ -31,48 +31,6 @@ Este ejercicio implementa las clases principales de un sistema de gestión de bi
 ---
 
 
-## DER
-
-```mermaid
-erDiagram
-  BIBLIOTECA ||--o{ SOCIO : "tiene"
-  BIBLIOTECA ||--o{ LIBRO : "posee"
-  SOCIO ||--o{ PRESTAMO : "realiza"
-  LIBRO ||--o{ PRESTAMO : "participa"
-
-  BIBLIOTECA {
-    int id_biblioteca PK
-    string nombre
-    string direccion
-  }
-
-  SOCIO {
-    string dni PK
-    string nombre
-    int id_biblioteca FK
-  }
-
-  LIBRO {
-    int id_ejemplar PK
-    string titulo
-    int edicion
-    string isbn
-    string estado
-    int id_biblioteca FK
-  }
-
-  PRESTAMO {
-    int id_prestamo PK
-    date fecha_desde
-    date fecha_hasta "NULL = activo"
-    string estado
-    string dni_socio FK
-    int id_ejemplar FK
-    int id_biblioteca FK
-  }
-
-
-```markdown
 
 
 ## 🚀 Cómo ejecutar
