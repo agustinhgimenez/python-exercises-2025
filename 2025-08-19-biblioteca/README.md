@@ -33,8 +33,8 @@ Este ejercicio implementa las clases principales de un sistema de gestión de bi
 
 ## DER
 
+```mermaid
 erDiagram
-
   BIBLIOTECA ||--o{ SOCIO : "tiene"
   BIBLIOTECA ||--o{ LIBRO : "posee"
   SOCIO ||--o{ PRESTAMO : "realiza"
@@ -64,7 +64,7 @@ erDiagram
   PRESTAMO {
     int id_prestamo PK
     date fecha_desde
-    date fecha_hasta  "NULL = activo"
+    date fecha_hasta "NULL = activo"
     string estado
     string dni_socio FK
     int id_ejemplar FK
@@ -72,11 +72,13 @@ erDiagram
   }
 
 
+```markdown
+
 
 ## 🚀 Cómo ejecutar
 
 ```bash
-python main.py
+python3 main.py
 
 
 

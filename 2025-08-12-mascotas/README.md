@@ -17,4 +17,4 @@ Se define la clase base `Mascota` y las subclases `Perro`, `Gato` y `Araña`.
 ## 🚀 Cómo ejecutar
 
 ```bash
-python main.py
+python3 main.py

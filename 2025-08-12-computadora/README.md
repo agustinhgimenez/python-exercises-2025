@@ -28,4 +28,4 @@ Se modela una clase `Computadora` con atributos, métodos de instancia y de clas
 ## 🚀 Cómo ejecutar
 
 ```bash
-python main.py
+python3 main.py
