@@ -37,6 +37,32 @@ def main():
 
     print(f"Socios: {bibl.total_socios()}")
 
+    # --- Préstamos ---
+    print("\n--- Pruebas de préstamos ---")
+
+    # Volvemos a agregar libro_1 para que haya 2 disponibles
+    bibl.agregar_libro(libro_1)
+    print(f"Existencias: {bibl.total_existencias()}")
+
+    # Prestar un libro a un socio
+    prestamo_1 = bibl.prestar_libro(socio_1, libro_1)
+    print(f"Préstamo realizado: {prestamo_1.libro.titulo} -> {prestamo_1.socio.nombre}")
+    print(f"Existencias después del préstamo: {bibl.total_existencias()}")
+    print(f"Total préstamos: {bibl.total_prestamos()}")
+    print(f"Libros en manos de {socio_1.nombre}: {[libro.titulo for libro in socio_1.prestamos]}")
+
+    # Intentar prestar el mismo libro de nuevo (debe fallar)
+    try:
+        bibl.prestar_libro(socio_2, libro_1)
+    except Exception as e:
+        print("Error esperado:", e)
+
+    # Intentar prestar un libro roto
+    libro_2.estado = "ROTO"
+    try:
+        bibl.prestar_libro(socio_2, libro_2)
+    except Exception as e:
+        print("Error esperado:", e)
 
 
 

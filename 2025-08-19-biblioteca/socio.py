@@ -5,7 +5,8 @@ class Socio:
         self.prestamos = []
 
     def retirar(self, libro):
-        pass
+        self.prestamos.append(libro)
 
     def devolver(self, libro):
-        pass
+         if libro in self.prestamos:
+            self.prestamos.remove(libro)

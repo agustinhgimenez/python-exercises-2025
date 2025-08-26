@@ -13,9 +13,17 @@ class Libro:
 
     @classmethod
     def _validar(cls, libro):
-        pass
-        # Lanzar una excepcion si la combinacion titulo, edicion, isbn ya existe
-        # y es difererente
+        clave = (libro.titulo, libro.edicion)
+        if clave in cls.existentes:
+            if cls.existentes[clave] != libro.isbn:
+                raise ValueError(
+                    f"Ya existe un libro con titulo '{libro.titulo}', "
+                    f"edición '{libro.edicion}' pero con otro ISBN "
+                    f"({cls.existentes[clave]} ≠ {libro.isbn})"
+                )
+        else:
+            # Si no existe, lo registramos
+            cls.existentes[clave] = libro.isbn
 
     def __str__(self):
         return f"Titulo: {self.titulo} Edicion: {self.edicion} Isbn: {self.isbn}"
