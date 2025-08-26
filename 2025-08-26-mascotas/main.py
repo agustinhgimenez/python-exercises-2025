@@ -10,10 +10,11 @@ def main():
     refg_1=Refugio()
     
 
-    #perr_1= Perro("eloy","26-8-2026",f"{Perro.get_tiempo_rehabilitacion}",f"{Perro.get_alojamiento}")
 
-    perr_1= Perro("eloy","26-8-2026")
+    perr_1 = Perro("eloy", "26-8-2026")
+    refg_1.agregar_mascota(perr_1)
+    print(refg_1)  # esto imprimirá como lo defina __str__ de Refugio
 
-    refg_1=Refugio.agregar_mascota(perr_1)
 
-    print(refg_1)
+if __name__ == "__main__":
+    main()
