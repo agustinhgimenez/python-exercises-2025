@@ -23,6 +23,6 @@ class Perro(Mascota):
         self.alojamiento = valor
 
     def __str__(self):
-        return (f"Nombre: {self.nombre}, Fecha de Ingreso: {self.fecha_ingreso}, "
+        return (f"Nombre del Perro: {self.nombre}, Fecha de Ingreso: {self.fecha_ingreso}, "
                 f"Tiempo Rehabilitación: {self.tiempo_rehabilitacion}, "
                 f"Alojamiento: {self.alojamiento}")

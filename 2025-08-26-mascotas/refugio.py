@@ -12,6 +12,7 @@ class Refugio:
         self.mascotas.add(mascota)
 
     def adoptar_mascota(self, mascota):
+        #self.mascotas.add(refugio)
         self.mascotas.remove(mascota)
 
     def agregar_adoptante(self, adoptante):

@@ -5,3 +5,6 @@ class Adoptante:
         self.nombre = nombre
         self.dni = dni
         self.mascota_adoptada = Mascota
+
+
+    
