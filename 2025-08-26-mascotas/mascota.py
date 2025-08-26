@@ -1,12 +1,11 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+
 
 class Mascota:
-    def __init__(self):
-        self.nombre = None
-        self.fecha_ingreso = None
-        self.tiempo_rehabilitacion = None
-        self.alojamiento = None
+    def __init__(self,nombre,fecha_ingreso,tiempo_rehabilitacion,alojamiento):
+        self.nombre = nombre
+        self.fecha_ingreso = fecha_ingreso
+        self.tiempo_rehabilitacion = tiempo_rehabilitacion
+        self.alojamiento = alojamiento
 
     def saludar_adoptante(self, ):
         pass

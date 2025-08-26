@@ -1,8 +1,7 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+from mascota import Mascota
 
 class Adoptante:
-    def __init__(self):
-        self.nombre = None
-        self.dni = None
-        self.mascota_adoptada = None
+    def __init__(self,nombre,dni):
+        self.nombre = nombre
+        self.dni = dni
+        self.mascota_adoptada = Mascota
