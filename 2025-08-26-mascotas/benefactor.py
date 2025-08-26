@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from Adoptante import Adoptante
+from adoptante import Adoptante
 
 
 class Benefactor(Adoptante):

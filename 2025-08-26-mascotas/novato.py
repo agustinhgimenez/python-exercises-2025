@@ -1,5 +1,5 @@
 
-from Adoptante import Adoptante
+from adoptante import Adoptante
 
 
 class Novato(Adoptante):
