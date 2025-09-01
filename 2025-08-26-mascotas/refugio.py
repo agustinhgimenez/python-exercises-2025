@@ -1,30 +1,41 @@
 # refugio.py
 class Refugio:
     def __init__(self):
-        self.adoptantes = set()
-        self.mascotas = set()
-
-    def mascotas_disponibles(self):
-        # por ahora, todas las cargadas
-        return list(self.mascotas)
+        self.mascotas = []     # en refugio
+        self.adopciones = []   # historial
 
     def agregar_mascota(self, mascota):
-        self.mascotas.add(mascota)
+        self.mascotas.append(mascota)
 
-    def adoptar_mascota(self, mascota):
-        #self.mascotas.add(refugio)
+    def listar_disponibles(self):
+        res = []
+        for m in self.mascotas:
+            if m.disponible():
+                res.append(m)
+        return res
+
+    def _tipo(self, mascota):
+        nombre = mascota.__class__.__name__.lower()
+        if nombre in ("perro", "gato", "ave"):
+            return nombre
+        return "desconocido"
+
+    def registrar_adopcion(self, adopcion):
+        mascota = adopcion.mascota
+        adoptante = adopcion.adoptante
+
+        if mascota not in self.mascotas:
+            raise ValueError("La mascota no está en el refugio.")
+        if not mascota.disponible():
+            raise ValueError("La mascota aún no está disponible.")
+
+        tipo = self._tipo(mascota)
+        if not adoptante.puede_adoptar(tipo):
+            raise ValueError("El adoptante no cumple los límites.")
+
+        adoptante.registrar_mascota(tipo)
         self.mascotas.remove(mascota)
+        self.adopciones.append(adopcion)
 
-    def agregar_adoptante(self, adoptante):
-        self.adoptantes.add(adoptante)
-
-    def eliminar_adoptante(self, adoptante):
-        self.adoptantes.remove(adoptante)
-
-    def __len__(self):
-        return len(self.mascotas)
-
-    def __str__(self):
-        if not self.mascotas:
-            return "Refugio vacío"
-        return "Refugio con mascotas:\n" + "\n".join(f"- {m}" for m in self.mascotas)
+    def historial_adopciones(self):
+        return self.adopciones

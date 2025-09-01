@@ -1,8 +1,6 @@
-
-
+# adopcion.py
 class Adopcion:
-    def __init__(self):
-        pass
-
-    def mostrar_registro(self, ):
-        pass
+    def __init__(self, mascota, adoptante, fecha):
+        self.mascota = mascota
+        self.adoptante = adoptante
+        self.fecha = fecha
