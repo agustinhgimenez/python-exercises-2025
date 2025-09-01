@@ -18,6 +18,13 @@ Cada carpeta corresponde a un ejercicio trabajado en clase, identificada por **f
   Modelado de una biblioteca con clases `Libro`, `Socio`, y futura implementación de `Préstamo`.  
   Incluye manejo de excepciones, uso de colecciones (`list` y `set`) y diagrama DER.
 
+- [2025-08-26 — Refugio de Mascotas](./2025-08-26-mascotas)  
+  Sistema de gestión de un refugio de animales con clases `Mascota`, `Perro`, `Gato`, `Ave`, `Adoptante`, `Novato`, `Benefactor`, `Refugio` y `Adopcion`.  
+  Permite listar mascotas disponibles según su rehabilitación, registrar adopciones y mantener un historial.  
+  Ejemplo de uso implementado en `main.py`.
+
+
+
 ---
 
 ## 🚀 Cómo ejecutar
