@@ -3,7 +3,7 @@ from adoptante import Adoptante
 
 class Benefactor(Adoptante):
     def __init__(self, nombre):
-        Adoptante.__init__(self, nombre)
+        super().__init__(nombre) #use super pero puedo usar Adoptante.__ si uso Adoptante es con self
         self.limite_perros = 2
         self.limite_gatos = 3
         self.limite_aves = 5

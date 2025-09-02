@@ -15,7 +15,7 @@ class Refugio:
         return res
 
     def _tipo(self, mascota):
-        nombre = mascota.__class__.__name__.lower()
+        nombre = mascota.__class__.__name__.lower() #use super pero puedo usar mascota.__
         if nombre in ("perro", "gato", "ave"):
             return nombre
         return "desconocido"
