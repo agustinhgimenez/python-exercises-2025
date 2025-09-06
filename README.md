@@ -20,7 +20,13 @@ Cada carpeta corresponde a un ejercicio trabajado en clase, identificada por **f
 
 - [2025-08-26 — Refugio de Mascotas](./2025-08-26-mascotas)  
   Sistema de gestión de un refugio de animales con clases `Mascota`, `Perro`, `Gato`, `Ave`, `Adoptante`, `Novato`, `Benefactor`, `Refugio` y `Adopcion`.  
-  Permite listar mascotas disponibles según su rehabilitación, registrar adopciones y mantener un historial.  
+  Permite listar mascotas disponibles según su rehabilitación, registrar adopciones y mantener un historial.
+
+- [2025-08-26 — Peaje](./2025-09-09-Peaje)  
+  Sistema de gestión de peajes con clases Vehiculo (abstracta) y subclases Auto, AutoElectrico, Moto y Camion.
+  Implementa el cálculo de tarifas mediante una política (TarifaPolicy), estrategias de descuento (EstrategiaDescuento) y modificadores (ModificadorTarifa) para casos especiales como vehículos gubernamentales.
+  Incluye CabinaPeaje para registrar cobros, calcular la recaudación total y determinar al mejor cliente según patente.
+  Se aplicaron principios SOLID y patrones de diseño (Strategy, Decorator).
 
 
 ---
