@@ -1,6 +1,7 @@
 #CLASE ABSTRACTA PADRE VEHICULO
+from abc import ABC, abstractmethod
 
-class Vehiculo:
+class Vehiculo(ABC):
     def __init__(self,patente,formaDePago):
         self.patente=patente
         self.formaDePago=formaDePago
@@ -8,7 +9,7 @@ class Vehiculo:
     def __str__(self):
         return self.patente
 
-
+    @abstractmethod #ACLARAR QUE ES ABSTRACTO , SI NO ESTA MAL
     def calcularTarifa(self): pass
 
 
