@@ -22,7 +22,7 @@ class Auto(Vehiculo):
         return self.valorAuto
 
 
-class Moto(Auto):
+class Moto(Auto):            #no necesito constructor porque ya lo heredo de Auto y auto lo hereda de Vehiculo
 
     def calcularTarifa(self):
         return self.valorAuto/2
@@ -33,7 +33,7 @@ class AutoElectrico(Auto):
     def calcularTarifa(self):
         return self.valorAuto*0.2
 
-class Camion(Vehiculo):
+class Camion(Vehiculo):   #aca si necesito constructor porque modificar al del vehiculo agrega ejes
     def __init__(self,patente,formaDePago,ejes): #definicion (va el self)
         super().__init__(patente,formaDePago) #invocacion
         self.ejes=ejes
