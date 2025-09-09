@@ -16,7 +16,7 @@ class Vehiculo(ABC):
 # TIPOS VEHICULOS
 
 class Auto(Vehiculo):
-    valorAuto=100
+    valorAuto=100 #variable de clase (Statica) , si es self. es variable de instancia
 
     def calcularTarifa(self):
         return self.valorAuto
