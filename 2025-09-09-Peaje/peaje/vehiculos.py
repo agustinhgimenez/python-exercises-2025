@@ -38,7 +38,7 @@ class Camion(Vehiculo):
         super().__init__(patente,formaDePago)
         self.ejes=ejes
 
-    def calcularTarifa(self):
+    def calcularTarifa(self): #todos tienen que usar self , si o si iguales (si uno usa self,ejes todos tienen que usar self,ejes) . Si alguno impone algo mas como ejes , por ejemplo se utiliza en todas las clases aunque los otros no las utilicen
         return 200*self.ejes
 
 class Gubernamental(Vehiculo):
