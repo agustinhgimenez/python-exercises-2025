@@ -34,8 +34,8 @@ class AutoElectrico(Auto):
         return self.valorAuto*0.2
 
 class Camion(Vehiculo):
-    def __init__(self,patente,formaDePago,ejes):
-        super().__init__(patente,formaDePago)
+    def __init__(self,patente,formaDePago,ejes): #definicion (va el self)
+        super().__init__(patente,formaDePago) #invocacion
         self.ejes=ejes
 
     def calcularTarifa(self): #todos tienen que usar self , si o si iguales (si uno usa self,ejes todos tienen que usar self,ejes) . Si alguno impone algo mas como ejes , por ejemplo se utiliza en todas las clases aunque los otros no las utilicen
