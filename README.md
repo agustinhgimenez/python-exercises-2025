@@ -22,6 +22,9 @@ Cada carpeta corresponde a un ejercicio trabajado en clase, identificada por **f
   Sistema de gestión de un refugio de animales con clases `Mascota`, `Perro`, `Gato`, `Ave`, `Adoptante`, `Novato`, `Benefactor`, `Refugio` y `Adopcion`.  
   Permite listar mascotas disponibles según su rehabilitación, registrar adopciones y mantener un historial.  
 
+- [2025-09-09 - Peaje](./2025-09-09-Peaje)  
+
+- [2025-09-16 - Lavadero](./2025-09-16-Lavadero)  
 
 ---
 
